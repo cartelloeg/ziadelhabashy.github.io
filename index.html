@@ -548,8 +548,9 @@
         <textarea id="message" placeholder="Tell me what's on your mind..."></textarea>
       </div>
       <div class="form-submit">
-        <button class="btn filled" onclick="handleSubmit()">Send Message</button>
+        <button class="btn filled" id="submitBtn" onclick="handleSubmit()">Send Message</button>
       </div>
+      <p id="form-status" style="margin-top:1rem; font-size:13px; color: var(--accent); display:none;"></p>
     </div>
   </section>
 
@@ -586,20 +587,51 @@
     }, { threshold: 0.1 });
     reveals.forEach(el => observer.observe(el));
 
-    // Contact form
-    function handleSubmit() {
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
+    // Contact form — Formspree
+    async function handleSubmit() {
+      const name    = document.getElementById('name').value.trim();
+      const email   = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
       const message = document.getElementById('message').value.trim();
+      const status  = document.getElementById('form-status');
+      const btn     = document.getElementById('submitBtn');
+
       if (!name || !email || !message) {
-        alert('Please fill in your name, email, and message.');
+        status.style.display = 'block';
+        status.style.color = '#c0392b';
+        status.textContent = 'Please fill in your name, email, and message.';
         return;
       }
-      alert(`Thanks ${name}! I'll get back to you soon.`);
-      document.getElementById('name').value = '';
-      document.getElementById('email').value = '';
-      document.getElementById('subject').value = '';
-      document.getElementById('message').value = '';
+
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch('https://formspree.io/f/xvzvzepq', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ name, email, subject, message })
+        });
+
+        if (res.ok) {
+          status.style.display = 'block';
+          status.style.color = 'var(--accent)';
+          status.textContent = `✓ Message sent! I'll get back to you soon, ${name}.`;
+          document.getElementById('name').value = '';
+          document.getElementById('email').value = '';
+          document.getElementById('subject').value = '';
+          document.getElementById('message').value = '';
+          btn.textContent = 'Sent!';
+        } else {
+          throw new Error('Server error');
+        }
+      } catch (err) {
+        status.style.display = 'block';
+        status.style.color = '#c0392b';
+        status.textContent = 'Something went wrong. Please try again or email me directly.';
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+      }
     }
   </script>
 </body>

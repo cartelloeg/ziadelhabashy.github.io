@@ -89,6 +89,7 @@ section + section { border-top: 1px solid var(--line); }
   border: 2px solid var(--line);
   margin-bottom: 2rem;
   opacity: 0; animation: fadeUp 0.6s 0.05s forwards;
+  
 }
 .hero-label {
   font-size: 11px;

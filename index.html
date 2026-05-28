@@ -5,15 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ziad El-Habashy — Portfolio</title>
 
-  <!-- SEO & Social -->
-  <meta name="description" content="Portfolio of Ziad El-Habashy, Computer Science student at Misr International University focused on software engineering, algorithms, and web development.">
+  <meta name="description" content="Portfolio of Ziad El-Habashy, Computer Science student at Misr International University — Frontend Developer, Software Engineer.">
   <meta property="og:title" content="Ziad El-Habashy — Portfolio">
-  <meta property="og:description" content="Projects, skills, and contact information.">
+  <meta property="og:description" content="Projects, experience, skills, and contact information.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cartelloeg.github.io/">
   <link rel="canonical" href="https://cartelloeg.github.io/">
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -21,123 +20,245 @@
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Close menu">✕</button>
-    <a href="#about"    onclick="closeMobileMenu()">About</a>
-    <a href="#projects" onclick="closeMobileMenu()">Projects</a>
-    <a href="#skills"   onclick="closeMobileMenu()">Skills</a>
-    <a href="#contact"  onclick="closeMobileMenu()">Contact</a>
+    <a href="#about"      onclick="closeMobileMenu()">About</a>
+    <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+    <a href="#projects"   onclick="closeMobileMenu()">Projects</a>
+    <a href="#skills"     onclick="closeMobileMenu()">Skills</a>
+    <a href="#contact"    onclick="closeMobileMenu()">Contact</a>
   </div>
 
   <!-- NAV -->
-  <nav>
-    <a href="#hero" class="nav-logo">Ziad El-Habashy</a>
+  <nav id="mainNav">
+    <a href="#hero" class="nav-logo">Z<span class="logo-dot">.</span>EH</a>
     <div class="nav-links">
       <a href="#about">About</a>
+      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </div>
-    <button class="nav-hamburger" onclick="openMobileMenu()" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-right">
+      <a href="./assets/Ziad_El-Habashy_Resume_2026 (1).pdf" download class="nav-cv-btn">Download CV</a>
+      <button class="nav-hamburger" onclick="openMobileMenu()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
-    <img class="hero-photo" src="./assets/profile.jpg"  alt="Portrait of Ziad El-Habashy" />
-    <p class="hero-label">Computer Science Student</p>
-    <h1 class="hero-name">Building things<br>that <em>actually</em> work.</h1>
-    <p class="hero-sub">I'm Ziad, a Computer Science student at Misr International University passionate about web development, building responsive interfaces, and turning ideas into clean, functional web applications.</p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn filled">View Projects</a>
-      <a href="https://www.linkedin.com/in/ziad-el-habashy" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
-      <a href="./assets/Ziad El-Habashy Resume 2026.pdf" download class="btn">Download CV</a>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <span class="hero-badge">Available — Summer 2026 Internship</span>
+        <h1 class="hero-name">Ziad<br><em>El-Habashy</em></h1>
+        <p class="hero-title">Frontend Developer &amp; CS Sophomore</p>
+        <p class="hero-sub">Building responsive, user-centred web applications. Passionate about clean code, algorithms, and turning ideas into real products.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn filled">View Projects</a>
+          <a href="#contact" class="btn outline">Get in Touch</a>
+        </div>
+        <div class="hero-meta">
+          <span><span class="dot"></span>Cairo, Egypt</span>
+          <span><span class="dot"></span>Misr International University</span>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="photo-frame">
+          <img class="hero-photo" src="./assets/photo.jpeg" alt="Portrait of Ziad El-Habashy" />
+          <div class="photo-border"></div>
+        </div>
+        <div class="hero-stat-card card1">
+          <span class="stat-num">4+</span>
+          <span class="stat-label">Landing Pages Built</span>
+        </div>
+        <div class="hero-stat-card card2">
+          <span class="stat-num">10+</span>
+          <span class="stat-label">Events Coordinated</span>
+        </div>
+      </div>
     </div>
-    <div class="hero-scroll">Scroll to explore</div>
+    <a href="#about" class="hero-scroll" aria-label="Scroll down">
+      <span>Scroll</span>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 9l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
   </section>
 
   <!-- ABOUT -->
   <section id="about">
-    <p class="section-label reveal">About Me</p>
+    <div class="section-tag reveal">About</div>
     <div class="about-grid reveal">
       <div class="about-text">
-        <h2>Code, curiosity,<br>and coffee.</h2>
-        <p>I'm a second-year Computer Science student focused on web development and building responsive, user-friendly applications.</p>
-        <p>I enjoy creating real-world projects, improving my frontend skills, and writing clean, maintainable code.</p>
-        </div>
+        <h2>Code, curiosity,<br>&amp; caffeine.</h2>
+        <p>I'm a second-year Computer Science student at MIU with real-world frontend experience. I interned at Code Alpha where I built responsive landing pages from UI/UX wireframes — translating designs into interactive interfaces used across multiple screen sizes.</p>
+        <p>I'm currently deepening my expertise in Python, SQL, and data analysis, with a growing focus on Data Science Engineering alongside my web development roots.</p>
+        <p>When I'm not coding, I've spent three years coordinating live events for crowds of 500+ — so I know how to stay calm, communicate, and deliver under pressure.</p>
+      </div>
       <div class="about-facts">
         <div class="fact">
           <span class="fact-label">University</span>
           <span class="fact-value">Misr International University</span>
         </div>
         <div class="fact">
+          <span class="fact-label">Degree</span>
+          <span class="fact-value">BSc Computer Science</span>
+        </div>
+        <div class="fact">
           <span class="fact-label">Year</span>
-          <span class="fact-value">2nd Year</span>
+          <span class="fact-value">Sophomore (2nd Year)</span>
         </div>
         <div class="fact">
           <span class="fact-label">GPA</span>
           <span class="fact-value">2.42 / 4.0</span>
         </div>
         <div class="fact">
-          <span class="fact-label">Interests</span>
-          <span class="fact-value">Web development</span>
+          <span class="fact-label">Focus</span>
+          <span class="fact-value">Web Dev &amp; Data Science</span>
         </div>
         <div class="fact">
           <span class="fact-label">Available</span>
-          <span class="fact-value">Summer 2026 Internship</span>
+          <span class="fact-value available-badge">Summer 2026 Internship</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="projects-header reveal">
-      <div>
-        <p class="section-label projects-section-label">Projects</p>
-        <h2>Things I've built</h2>
-      </div>
-    </div>
-    <div class="project-grid">
-<a class="project-card featured reveal" href="https://github.com/cartelloeg/cartello" target="_blank"><div>
-          <h3>E-Commerce Website "Cartello"</h3>
-      <p>Developed a responsive e-commerce web application with product listing, cart functionality, and dynamic UI interactions using JavaScript.</p>
-          <div class="project-stack">
-            <span class="stack-tag">JS</span>
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-tag reveal">Experience</div>
+    <h2 class="section-heading reveal">Where I've worked</h2>
+    <div class="timeline reveal">
+
+      <div class="timeline-item">
+        <div class="timeline-meta">
+          <span class="timeline-period">Dec 2025 — Jan 2026</span>
+          <span class="timeline-type">Internship</span>
+        </div>
+        <div class="timeline-content">
+          <h3>Frontend Developer Intern</h3>
+          <span class="timeline-company">Code Alpha</span>
+          <ul>
+            <li>Built 4+ responsive landing pages by translating UI/UX wireframes into interactive interfaces using HTML, CSS, and JavaScript.</li>
+            <li>Improved mobile usability across major screen sizes through responsive design best practices.</li>
+          </ul>
+          <div class="timeline-stack">
             <span class="stack-tag">HTML</span>
             <span class="stack-tag">CSS</span>
+            <span class="stack-tag">JavaScript</span>
+            <span class="stack-tag">Responsive Design</span>
           </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-meta">
+          <span class="timeline-period">2022 — 2025</span>
+          <span class="timeline-type">Freelance</span>
+        </div>
+        <div class="timeline-content">
+          <h3>Event Coordinator</h3>
+          <span class="timeline-company">Tickets Marche</span>
+          <ul>
+            <li>Coordinated on-ground operations for 10+ live events, managing attendee flow and venue logistics for crowds of 500+.</li>
+            <li>Monitored ticket scanning systems across multiple entry points, coordinating with the technical team to minimise disruptions.</li>
+            <li>Contributed to post-event reporting over 3 years, documenting operational issues and improvement recommendations.</li>
+          </ul>
+          <div class="timeline-stack">
+            <span class="stack-tag">Operations</span>
+            <span class="stack-tag">Logistics</span>
+            <span class="stack-tag">Technical Coordination</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-tag reveal">Projects</div>
+    <h2 class="section-heading reveal">Things I've built</h2>
+    <div class="project-grid">
+
+      <a class="project-card featured reveal" href="https://github.com/cartelloeg/cartello" target="_blank" rel="noopener noreferrer">
+        <div class="project-body">
+          <span class="project-tag">Full-Stack</span>
+          <h3>E-Commerce Website — Cartello</h3>
+          <p>A full-stack e-commerce web application with responsive frontend and backend integration. Implemented product listings, cart functionality, dynamic UI interactions, and basic user authentication.</p>
+          <div class="project-stack">
+            <span class="stack-tag">JavaScript</span>
+            <span class="stack-tag">HTML</span>
+            <span class="stack-tag">CSS</span>
+            <span class="stack-tag">Node.js</span>
+            <span class="stack-tag">MongoDB</span>
+          </div>
+        </div>
+        <div class="project-arrow">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H7M15 5v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
       </a>
 
-      <a class="project-card reveal" href="https://github.com/ziadhabashy" target="_blank" rel="noopener noreferrer">
-        <div>
+      <a class="project-card reveal" href="https://github.com/ziadelhabashy" target="_blank" rel="noopener noreferrer">
+        <div class="project-body">
+          <span class="project-tag">Networking</span>
+          <h3>Enterprise Network — Cisco Packet Tracer</h3>
+          <p>Designed a multi-site enterprise network simulating real infrastructure — VLAN segmentation, inter-VLAN routing, OSPF &amp; EIGRP with redistribution, DHCP, NAT (static &amp; PAT), site-to-site IPsec VPN, DNS, email, NTP, and wireless setup.</p>
+          <div class="project-stack">
+            <span class="stack-tag">Cisco Packet Tracer</span>
+            <span class="stack-tag">OSPF</span>
+            <span class="stack-tag">EIGRP</span>
+            <span class="stack-tag">IPsec VPN</span>
+          </div>
+        </div>
+        <div class="project-arrow">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H7M15 5v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </a>
+
+      <a class="project-card reveal" href="https://github.com/ziadelhabashy" target="_blank" rel="noopener noreferrer">
+        <div class="project-body">
+          <span class="project-tag">Java · OOP</span>
+          <h3>Recruitment Management System</h3>
+          <p>A Java-based recruitment system using OOP principles. Implements role-based logic and data handling to manage candidates and recruitment workflows.</p>
+          <div class="project-stack">
+            <span class="stack-tag">Java</span>
+            <span class="stack-tag">OOP</span>
+            <span class="stack-tag">Collections</span>
+          </div>
+        </div>
+        <div class="project-arrow">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H7M15 5v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </a>
+
+      <a class="project-card reveal" href="https://github.com/ziadelhabashy" target="_blank" rel="noopener noreferrer">
+        <div class="project-body">
+          <span class="project-tag">C++ · Algorithms</span>
+          <h3>Graph Traversal Engine</h3>
+          <p>BFS and DFS implementation using adjacency matrices, queues, and stacks. Analysed time complexity and traversal efficiency across different graph sizes.</p>
+          <div class="project-stack">
+            <span class="stack-tag">C++</span>
+            <span class="stack-tag">Data Structures</span>
+            <span class="stack-tag">Algorithms</span>
+          </div>
+        </div>
+        <div class="project-arrow">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H7M15 5v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </a>
+
+      <a class="project-card reveal" href="https://github.com/ziadelhabashy" target="_blank" rel="noopener noreferrer">
+        <div class="project-body">
+          <span class="project-tag">C++ · Logic</span>
           <h3>MIU GPA Calculator</h3>
           <p>A GPA calculator tailored to MIU's grading system. Computes student GPA based on course credits and grades with input validation and conditional logic.</p>
           <div class="project-stack">
             <span class="stack-tag">C++</span>
-            <span class="stack-tag">Problem Solving</span>
             <span class="stack-tag">Input Validation</span>
+            <span class="stack-tag">Problem Solving</span>
           </div>
         </div>
-      </a>
-
-      <a class="project-card reveal" href="https://github.com/ziadhabashy" target="_blank" rel="noopener noreferrer">
-        <h3>Recruitment System</h3>
-        <p>A Java-based recruitment management system using OOP principles. Implements role-based logic to manage candidates and recruitment workflows.</p>
-        <div class="project-stack">
-          <span class="stack-tag">Java</span>
-          <span class="stack-tag">OOP</span>
-          <span class="stack-tag">Collections</span>
-        </div>
-      </a>
-
-      <a class="project-card reveal" href="https://github.com/ziadhabashy" target="_blank" rel="noopener noreferrer">
-        <h3>Graph Traversal</h3>
-        <p>Implementation of BFS and DFS using adjacency matrices, queues, and stacks. Focused on algorithm correctness, traversal order, and time complexity.</p>
-        <div class="project-stack">
-          <span class="stack-tag">C++</span>
-          <span class="stack-tag">Data Structures</span>
-          <span class="stack-tag">Algorithms</span>
+        <div class="project-arrow">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H7M15 5v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
       </a>
 
@@ -146,73 +267,127 @@
 
   <!-- SKILLS -->
   <section id="skills">
-    <p class="section-label reveal">Skills</p>
-    <h2 class="reveal">What I work with</h2>
-    <div class="skills-grid reveal">
+    <div class="section-tag reveal">Skills</div>
+    <h2 class="section-heading reveal">What I work with</h2>
+    <div class="skills-container reveal">
+
       <div class="skill-group">
-        <h4>Languages</h4>
-        <div class="skill-item"><span class="skill-dot"></span>HTML</div>
-        <div class="skill-item"><span class="skill-dot"></span>CSS</div>
-        <div class="skill-item"><span class="skill-dot"></span>Javascript</div>
-        <div class="skill-item"><span class="skill-dot"></span>C++</div>
-        <div class="skill-item"><span class="skill-dot"></span>Java</div>
-        <div class="skill-item"><span class="skill-dot"></span>SQL</div>
+        <h4>Web Development</h4>
+        <div class="skill-pills">
+          <span class="pill">HTML</span>
+          <span class="pill">CSS</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">Node.js</span>
+          <span class="pill">MongoDB</span>
+          <span class="pill">Responsive Design</span>
+        </div>
       </div>
+
       <div class="skill-group">
-        <h4>Concepts</h4>
-        <div class="skill-item"><span class="skill-dot"></span>Responsive Design</div>
-        <div class="skill-item"><span class="skill-dot"></span>OOP</div>
-        <div class="skill-item"><span class="skill-dot"></span>Data Structures</div>
-        <div class="skill-item"><span class="skill-dot"></span>Algorithms</div>
-        <div class="skill-item"><span class="skill-dot"></span>Database Design</div>
-        <div class="skill-item"><span class="skill-dot"></span>Networking basics</div>
+        <h4>Programming Languages</h4>
+        <div class="skill-pills">
+          <span class="pill">Java</span>
+          <span class="pill">C++</span>
+          <span class="pill">Python</span>
+          <span class="pill">NumPy</span>
+          <span class="pill">SQL</span>
+        </div>
       </div>
+
       <div class="skill-group">
-        <h4>Tools &amp; Certs</h4>
-        <div class="skill-item"><span class="skill-dot"></span>Git &amp; GitHub</div>
+        <h4>CS Concepts</h4>
+        <div class="skill-pills">
+          <span class="pill">OOP</span>
+          <span class="pill">Data Structures</span>
+          <span class="pill">Algorithms</span>
+          <span class="pill">Database Design</span>
+          <span class="pill">Problem Solving</span>
+        </div>
       </div>
+
+      <div class="skill-group">
+        <h4>Networking</h4>
+        <div class="skill-pills">
+          <span class="pill">IP Addressing</span>
+          <span class="pill">VLANs</span>
+          <span class="pill">OSPF</span>
+          <span class="pill">EIGRP</span>
+          <span class="pill">NAT / DHCP</span>
+          <span class="pill">IPsec VPN</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h4>Tools</h4>
+        <div class="skill-pills">
+          <span class="pill">Git &amp; GitHub</span>
+          <span class="pill">Cisco Packet Tracer</span>
+          <span class="pill">Jupyter</span>
+          <span class="pill">Google Colab</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact">
-    <div class="contact-header reveal">
-      <p class="section-label">Contact</p>
-      <h2>Let's talk.</h2>
-      <p>Open to internships, collaborations, or just a good conversation about code.</p>
-      <p class="contact-direct">Or email me directly at <a href="mailto:ziadelhabashy5@gmail.com">ziadelhabashy5@gmail.com</a></p>
-    </div>
-    <form class="contact-form reveal" id="contact-form" onsubmit="handleSubmit(event)">
-      <div class="form-row">
-        <div>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+    <div class="section-tag reveal">Contact</div>
+    <div class="contact-layout reveal">
+      <div class="contact-left">
+        <h2>Let's talk.</h2>
+        <p>Open to internships, collaborations, or just a good conversation about code.</p>
+        <div class="contact-links">
+          <a href="mailto:ziadelhabashy5@gmail.com" class="contact-link">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4l6 5 6-5M2 4h12v8H2V4z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            ziadelhabashy5@gmail.com
+          </a>
+          <a href="https://linkedin.com/in/ziad-el-habashy" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M5 7v4M5 5v.5M8 11V8.5c0-.83.67-1.5 1.5-1.5S11 7.67 11 8.5V11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            linkedin.com/in/ziad-el-habashy
+          </a>
+          <a href="https://github.com/cartelloeg" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2a6 6 0 00-1.897 11.69c.3.055.41-.13.41-.288v-1.14c-1.668.364-2.017-.806-2.017-.806-.273-.693-.666--.877-.666-.877-.545-.373.04-.366.04-.366.602.043.92.62.92.62.535.917 1.403.652 1.745.499.054-.388.21-.652.381-.802-1.332-.151-2.732-.666-2.732-2.963 0-.655.234-1.19.617-1.61-.062-.151-.267-.76.058-1.584 0 0 .504-.161 1.65.616A5.74 5.74 0 018 5.973c.51.002 1.022.069 1.5.202 1.145-.777 1.648-.616 1.648-.616.326.824.12 1.433.059 1.584.384.42.616.955.616 1.61 0 2.304-1.403 2.81-2.74 2.958.216.185.408.55.408 1.108v1.642c0 .16.108.346.413.288A6.002 6.002 0 008 2z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            github.com/cartelloeg
+          </a>
+          <a href="tel:+201118172555" class="contact-link">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 3h3l1.5 3.5-1.5 1a8 8 0 003.5 3.5l1-1.5L14 11v3c-6.075 0-11-4.925-11-11z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            +20 111 817 2555
+          </a>
         </div>
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+      </div>
+      <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+          </div>
         </div>
-      </div>
-      <div>
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" placeholder="Internship opportunity / Collaboration" />
-      </div>
-      <div>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Tell me what's on your mind..." required></textarea>
-      </div>
-      <div class="form-submit">
+        <div class="form-field">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Internship opportunity / Collaboration" />
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me what's on your mind..." required></textarea>
+        </div>
         <button type="submit" class="btn filled" id="submitBtn">Send Message</button>
-      </div>
-      <p id="form-status"></p>
-    </form>
+        <p id="form-status"></p>
+      </form>
+    </div>
   </section>
 
   <footer>
-    <span>© 2026 Ziad El-Habashy</span>
+    <span class="footer-name">Ziad El-Habashy</span>
+    <span class="footer-copy">© 2026 — All rights reserved</span>
     <div class="footer-links">
       <a href="https://github.com/cartelloeg" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://www.linkedin.com/in/ziad-el-habashy" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="./assets/Ziad El-Habashy Resume 2026.pdf" download>Download CV</a>
+      <a href="./assets/Ziad El-Habashy Resume 2026.pdf" download>CV</a>
     </div>
   </footer>
 
